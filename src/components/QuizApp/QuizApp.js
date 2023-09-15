@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useImmer } from 'use-immer';
 import Result from '../Result/Result';
-import { NavLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 const QuizApp = () => {
@@ -101,7 +100,6 @@ const QuizApp = () => {
       <Helmet>
         <title>Quiz Page</title>
       </Helmet>
-      <NavLink className="nav-link " aria-current="page" to="/"></NavLink>
       <h1>QuizApp</h1>
       <div>
         {submitStatus ? (

@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { NavLink } from 'react-router-dom';
 const Result = (props) => {
   const [showScoreStatus, setScoreStatus] = useState(false);
   // useState that used to count score
@@ -24,12 +23,6 @@ const Result = (props) => {
       <Helmet>
         <title>Result Page</title>
       </Helmet>
-      <NavLink
-        className="nav-link"
-        aria-current="page"
-        to="/result-page"
-      ></NavLink>
-      <div>Result</div>
       <div className="row m-5"></div>
       <div className="container p-5 bg-dark">
         {showScoreStatus && (
@@ -83,7 +76,8 @@ const Result = (props) => {
 };
 
 Result.propTypes = {
-  finalArray: PropTypes.array
+  finalArray: PropTypes.array,
+  Link: PropTypes.string
 };
 
 export default Result;
